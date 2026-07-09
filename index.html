@@ -65,6 +65,35 @@
   .btn:hover { color: #fff; background: rgba(255,255,255,0.1); }
   .btn.active { background: #D4A017; color: #000; font-weight: 600; }
   #canvas-container { width: 100vw; height: 100vh; }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .header {
+      top: 16px; left: 16px; right: 16px;
+    }
+    .header h1 { font-size: 18px; }
+    .header p { font-size: 10px; }
+    .controls {
+      top: auto;
+      bottom: 24px;
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      flex-direction: row;
+      width: 92vw;
+      max-width: 92vw;
+      overflow-x: auto;
+      padding: 12px;
+      border-radius: 16px;
+      /* hide scrollbar for cleaner look */
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .controls::-webkit-scrollbar {
+      display: none;
+    }
+    .btn { padding: 10px 14px; font-size: 13px; }
+  }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
